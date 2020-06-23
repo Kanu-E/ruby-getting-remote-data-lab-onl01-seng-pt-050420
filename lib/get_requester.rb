@@ -16,13 +16,13 @@ class GetRequester
   def get_response_body
      uri = URI.parse(url)
     response = Net::HTTP.get_response(uri)
-    response
+    response.body
   end
   
   def parse_json
     programs = JSON.parse(self.get_response_body)
-  programs.collect do |program|
-    program["agency"]  
+  
+    programs
   end
  
   end
