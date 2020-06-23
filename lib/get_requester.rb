@@ -20,7 +20,7 @@ class GetRequester
   end
   
   def parse_json
-    
+    JSON.parse(self.get_programs)
   end
   
   
